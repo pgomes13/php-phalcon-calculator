@@ -14,5 +14,5 @@ gulp.task('copy', function (done) {
 
 gulp.task('copy:templates', function () {
 	return gulp.src(path.join(conf.paths.assets, '/templates/**/*.html'))
-		.pipe(gulp.dest(path.join(conf.paths.build, '/assets/templates/')))
+		.pipe(gulp.dest(path.join(conf.paths.build, '/templates/')))
 });

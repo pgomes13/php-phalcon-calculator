@@ -12,7 +12,7 @@
 			.state('app.home', {
 				url: '/home',
 				abstract: false,
-				templateUrl: '/assets/templates/home/home.html',
+				templateUrl: '/public/templates/home/home.html',
 				controller: 'HomeController as home'
 			});
 

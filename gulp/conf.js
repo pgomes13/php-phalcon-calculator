@@ -12,7 +12,7 @@ exports.paths = {
   client: './client',
   angular: './client/app',
   sass: './client/sass',
-  assets: './client/assets'
+  assets: './client/public'
 };
 
 exports.sources = {

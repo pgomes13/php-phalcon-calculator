@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	HomeRoute.$inject = ['$stateProvider', 'env'];
+	HomeRoute.$inject = ['$stateProvider'];
 
 	angular
 		.module('calculator')
@@ -12,7 +12,7 @@
 			.state('app.home', {
 				url: '/home',
 				abstract: false,
-				templateUrl: env.directory + '/assets/templates/home/home.html',
+				templateUrl: '/assets/templates/home/home.html',
 				controller: 'HomeController as home'
 			});
 

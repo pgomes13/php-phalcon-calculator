@@ -1,8 +1,0 @@
-{
-	"development": {
-		"directory": ""
-	},
-	"production": {
-		"directory": "/public"
-	}
-}

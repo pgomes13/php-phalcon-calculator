@@ -3,6 +3,7 @@
 
 	angular
 		.module('calculator', [
-			'ui.router'
+			'ui.router',
+			'env'
 		]);
 })();

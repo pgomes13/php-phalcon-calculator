@@ -19,7 +19,7 @@ gulp.task('useref', function () {
   var cssFilter = filter("**/*.css", { restore: true });
   var indexHtmlFilter = filter(['**/*', '!**/index.html'], { restore: true });
 
-  return gulp.src(path.join(conf.paths.app, '/index.html'))
+  return gulp.src(path.join(conf.paths.client, '/index.html'))
     .pipe(useref())
     .pipe(jsFilter)
     .pipe(annotate())
@@ -32,5 +32,5 @@ gulp.task('useref', function () {
     .pipe(rev())
     .pipe(indexHtmlFilter.restore)
     .pipe(revReplace())
-    .pipe(gulp.dest(conf.paths.build));
+    .pipe(gulp.dest(conf.paths.root));
 });

@@ -4,4 +4,5 @@ node_modules
 client/assets/components
 client/assets/css/*.css
 client/assets/js/*.js
+public
 coverage

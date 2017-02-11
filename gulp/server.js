@@ -9,7 +9,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('server:dev', function () {
 	browserSync.init({
 		server: {
-			baseDir: conf.paths.root
+			baseDir: conf.paths.client
 		}
 	})
 
@@ -26,7 +26,7 @@ gulp.task('server:dev', function () {
 gulp.task('server:prod', function () {
 	browserSync.init({
 		server: {
-			baseDir: conf.paths.build
+			baseDir: conf.paths.root
 		}
 	})
 });

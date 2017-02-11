@@ -1,0 +1,113 @@
+.calculator {
+  width: 325px;
+  height: auto;
+  overflow:hidden;
+  margin: 100px auto;
+  padding: 20px 20px 9px;
+  position:relative;
+  background: rgba(0,0,0,0.3);
+  border-radius: 3px;
+  box-shadow:  0px 10px 15px rgba(0, 0, 0, 0.2);
+
+  .top {
+    span.clear {
+      position: absolute;
+      z-index: 6;
+      float: left;
+      position: relative;
+      top: 0;
+      cursor: pointer;
+      width: 66px;
+      height: 56px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 3px;
+      box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+      margin: 0 7px 11px 0;
+      color: #ccc;
+      line-height: 56px;
+      text-align: center;
+      user-select: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-radius:190px;
+        background: rgba(0,0,0,0.1);
+        color: white;
+      }
+
+      &:active {
+        top: 4px;
+        box-shadow: 0px 0px #d3545d;
+      }
+    }
+
+    .screen {
+      height: 80px;
+      width: 100%;
+      position:absolute;
+      top:0; left:0;
+      padding: 20px 10px;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 27px;
+      font-weight:normal;
+      line-height: 40px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      text-align: right;
+      letter-spacing: 1px;
+    }
+  }
+
+  .keys {
+    span {
+      float: left;
+      position: relative;
+      top: 0;
+      cursor: pointer;
+      width: 66px;
+      height: 56px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 3px;
+      box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+      margin: 0 7px 11px 0;
+      color: #ccc;
+      line-height: 56px;
+      text-align: center;
+      user-select: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(255,255,255,0.8);
+        color: #333;
+      }
+
+      &:active {
+        box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+        top: 4px;
+      }
+    }
+
+    span.operator {
+      background: rgba(250,100,0,0.3);
+      margin-right: 0;
+    }
+
+    span.eval {
+      color: #888e5f;
+
+      &:hover {
+        background: #abb850;
+        color: #ffffff;
+      }
+
+      &:active {
+        box-shadow: 0px 0px #717a33;
+        top: 4px;
+      }
+    }
+  }
+
+  .keys, .top {
+    overflow: hidden;
+  }
+}

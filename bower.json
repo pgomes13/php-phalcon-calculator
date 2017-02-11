@@ -1,0 +1,15 @@
+{
+  "name": "php-phalcon-calculator",
+  "description": "A simple PHP Phalcon calculator application.",
+  "main": "Gulfile.js",
+  "authors": [
+    "Pascoal Gomes"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pgomes13/php-phalcon-calculator",
+  "private": true,
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "angular": "^1.6.2"
+  }
+}

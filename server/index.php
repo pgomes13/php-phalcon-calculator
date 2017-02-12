@@ -53,6 +53,9 @@ $app->get(
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
+        $response->setHeader('Access-Control-Allow-Origin', '*');
+        $response->setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
+        $response->sendHeaders();
 
         if ($num1 and $num2) {
             $response->setJsonContent(
@@ -75,6 +78,9 @@ $app->get(
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
+        $response->setHeader('Access-Control-Allow-Origin', '*');
+        $response->setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
+        $response->sendHeaders();
 
         if ($num1 and $num2) {
             $response->setJsonContent(
@@ -97,6 +103,9 @@ $app->get(
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
+        $response->setHeader('Access-Control-Allow-Origin', '*');
+        $response->setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
+        $response->sendHeaders();
 
         if ($num1 and $num2) {
             $response->setJsonContent(

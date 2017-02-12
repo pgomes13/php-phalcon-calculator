@@ -1,25 +1,25 @@
 <div class="calculator">
 	<div class="top">
 		<span class="clear">C</span>
-		<div class="screen"></div>
+		<div class="screen">{{home.calc.result}}</div>
 	</div>
 
 	<div class="keys">
 		<span ng-click="home.selectNumber(7)">7</span>
 		<span ng-click="home.selectNumber(8)">8</span>
 		<span ng-click="home.selectNumber(9)">9</span>
-		<span class="operator">÷</span>
+		<span class="operator" ng-click="home.processOperation('÷')">÷</span>
 		<span ng-click="home.selectNumber(4)">4</span>
 		<span ng-click="home.selectNumber(5)">5</span>
 		<span ng-click="home.selectNumber(6)">6</span>
-		<span class="operator">x</span>
+		<span class="operator" ng-click="home.processOperation('x')">x</span>
 		<span ng-click="home.selectNumber(1)">1</span>
 		<span ng-click="home.selectNumber(2)">2</span>
 		<span ng-click="home.selectNumber(3)">3</span>
-		<span class="operator">-</span>
+		<span class="operator" ng-click="home.processOperation('-')">-</span>
 		<span ng-click="home.selectNumber(0)">0</span>
 		<span>.</span>
-		<span class="eval">=</span>
-		<span class="operator">+</span>
+		<span class="eval" ng-click="home.getResult()">=</span>
+		<span class="operator" ng-click="home.processOperation('+')">+</span>
 	</div>
 </div>

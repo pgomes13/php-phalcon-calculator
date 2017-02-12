@@ -7,37 +7,36 @@ var util = require('gulp-util');
  * Please handle with care!
  */
 exports.paths = {
-  root:'./',
-  build: './public',
-  client: './client',
-  angular: './client/app',
-  sass: './client/sass',
-  assets: './client/public'
+	root: './',
+	build: './public',
+	client: './client',
+	angular: './client/app',
+	sass: './client/sass',
+	assets: './client/public'
 };
 
 exports.sources = {
-  angular: [
-    exports.paths.angular + '/config.js',
-    exports.paths.angular + '/app.modules.js',
-    exports.paths.angular + '/**/*.js',
-    '!' + exports.paths.angular + '/**/specs/*.spec.js'
-  ],
-  sass: [
-    exports.paths.sass + '/*.scss',
-    exports.paths.sass + '/**/*.scss'
-  ],
-  css: [
-    exports.paths.assets + '/css/*.css'
-  ],
-  js: [
-    exports.paths.assets + '/js/*.js'
-  ],
-  templates: [
-    exports.paths.angular + '/**/*.html'
-  ]
+	angular: [
+		exports.paths.angular + '/app.modules.js',
+		exports.paths.angular + '/**/*.js',
+		'!' + exports.paths.angular + '/**/specs/*.spec.js'
+	],
+	sass: [
+		exports.paths.sass + '/*.scss',
+		exports.paths.sass + '/**/*.scss'
+	],
+	css: [
+		exports.paths.assets + '/css/*.css'
+	],
+	js: [
+		exports.paths.assets + '/js/*.js'
+	],
+	templates: [
+		exports.paths.angular + '/**/*.html'
+	]
 };
 
 
 exports.isProd = function () {
-  return util.env.prod ? true : false;
+	return util.env.prod ? true : false;
 };

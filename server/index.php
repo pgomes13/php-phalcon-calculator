@@ -24,7 +24,7 @@ $app->get('/preflight', function() use ($app) {
 
 // Get addition result of two numbers
 $app->get(
-    "/api/add/{num1:[0-9]+}/{num2:[0-9]+}",
+    "/api/add/{num1:[0-9.]+}/{num2:[0-9.]+}",
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
@@ -49,7 +49,7 @@ $app->get(
 
 // Get subtraction result of two numbers
 $app->get(
-    "/api/subtract/{num1:[0-9]+}/{num2:[0-9]+}",
+    "/api/subtract/{num1:[0-9.]+}/{num2:[0-9.]+}",
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
@@ -74,7 +74,7 @@ $app->get(
 
 // Get multiplication result of two numbers
 $app->get(
-    "/api/multiply/{num1:[0-9]+}/{num2:[0-9]+}",
+    "/api/multiply/{num1:[0-9.]+}/{num2:[0-9.]+}",
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();
@@ -99,7 +99,7 @@ $app->get(
 
 // Get division result of two numbers
 $app->get(
-    "/api/divide/{num1:[0-9]+}/{num2:[0-9]+}",
+    "/api/divide/{num1:[0-9.]+}/{num2:[0-9.]+}",
     function ($num1, $num2) use ($app) {
         // Create a response
         $response = new Response();

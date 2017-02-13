@@ -15,7 +15,6 @@ gulp.task('run:dev', function (done) {
 gulp.task('run:prod', function (done) {
   runSequence(
     'build',
-    'server:prod',
     done
   )
 });

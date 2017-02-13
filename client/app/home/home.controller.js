@@ -33,7 +33,7 @@
 		}
 
 		function selectNumber(num) {
-			home.calc.display = home.calc.display.replace(/\D/g,'');
+			home.calc.display = home.calc.display.replace(/[-+÷x\s]/g,'');
 			home.calc.display = home.calc.display + num;
 			home.calc.processed = false;
 		}
@@ -42,7 +42,7 @@
 
 			switch (operator) {
 				case 'divide':
-					home.calc.operations.divide.push(parseInt(home.calc.display));
+					home.calc.operations.divide.push(Number(home.calc.display));
 					home.calc.display = '÷';
 					home.calc.current_operation = operator;
 					if (home.calc.operations.divide.length === 2) {
@@ -52,7 +52,7 @@
 					break;
 
 				case 'multiply':
-					home.calc.operations.multiply.push(parseInt(home.calc.display));
+					home.calc.operations.multiply.push(Number(home.calc.display));
 					home.calc.display = 'x';
 					home.calc.current_operation = operator;
 					if (home.calc.operations.multiply.length === 2) {
@@ -62,7 +62,7 @@
 					break;
 
 				case 'subtract':
-					home.calc.operations.subtract.push(parseInt(home.calc.display));
+					home.calc.operations.subtract.push(Number(home.calc.display));
 					home.calc.display = '-';
 					home.calc.current_operation = operator;
 					if (home.calc.operations.subtract.length === 2) {
@@ -72,7 +72,7 @@
 					break;
 
 				case 'add':
-					home.calc.operations.add.push(parseInt(home.calc.display));
+					home.calc.operations.add.push(Number(home.calc.display));
 					home.calc.display = '+';
 					home.calc.current_operation = operator;
 					if (home.calc.operations.add.length === 2) {

@@ -1,7 +1,8 @@
 <div class="calculator">
 	<div class="top">
 		<span class="clear" ng-click="home.reset()">C</span>
-		<div class="screen">{{home.calc.num.selected || home.calc.result}}</div>
+		<div class="screen" ng-if="home.calc.processed">{{home.calc.result}}</div>
+		<div class="screen" ng-else="home.calc.processed">{{home.calc.display}}</div>
 	</div>
 
 	<div class="keys">

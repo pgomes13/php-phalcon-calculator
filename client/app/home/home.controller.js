@@ -9,11 +9,14 @@
 
 	function HomeController(OperationsFactory) {
 		var home = this;
+
+		// Function declarations
 		home.selectNumber = selectNumber;
 		home.processOperation = processOperation;
 		home.getResult = getResult;
 		home.reset = reset;
 
+		// initialise the values
 		init();
 
 		function init() {
@@ -32,12 +35,20 @@
 			}
 		}
 
+		/**
+		 * Process the number selected on the keypad
+		 * @param num
+		 */
 		function selectNumber(num) {
-			home.calc.display = home.calc.display.replace(/[-+÷x\s]/g,'');
+			home.calc.display = home.calc.display.replace(/[-+÷x\s]/g,''); // only numbers & . (dot)
 			home.calc.display = home.calc.display + num;
 			home.calc.processed = false;
 		}
 
+		/**
+		 * Process the multiple calculations
+		 * @param operator
+		 */
 		function processOperation(operator) {
 
 			switch (operator) {
@@ -83,6 +94,11 @@
 			}
 		}
 
+		/**
+		 * Calculate the numbers as per operations
+		 * @param arr
+		 * @param operation
+		 */
 		function calculation(arr, operation) {
 			OperationsFactory.getResult(arr, operation).then(function (response) {
 				if (response.status === 200) {
@@ -94,11 +110,17 @@
 			});
 		}
 
+		/**
+		 * Display the results
+		 */
 		function getResult() {
 			processOperation(home.calc.current_operation);
 			reset();
 		}
 
+		/**
+		 * Reset the calculation
+		 */
 		function reset() {
 			init();
 		}

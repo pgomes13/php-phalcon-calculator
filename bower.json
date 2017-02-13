@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "angular-ui-router": "^0.4.2",
-    "angular": "^1.6.2"
+    "angular": "^1.6.2",
+    "angular-mocks": "^1.6.2"
   }
 }

@@ -5,6 +5,7 @@ use Phalcon\Http\Response;
 
 $app = new Micro();
 
+// Grant access to all origins
 $app->get('/preflight', function() use ($app) {
         $content_type = 'application/json';
         $status = 200;
@@ -126,11 +127,23 @@ $app->get(
 // Route not found
 $app->notFound(
     function () use ($app) {
-        $app->response->setStatusCode(404, "Not Found");
+        // Create a response
+        $response = new Response();
+        $response->setHeader('Access-Control-Allow-Origin', '*');
+        $response->setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
+        $response->setStatusCode(404, "Not Found");
+        $response->sendHeaders();
 
-        $app->response->sendHeaders();
+        $response->setJsonContent(
+            [
+                "status"    => "ERROR",
+                "data"      => [
+                    "message"   => "This endpoint does not exist! Please refer to the documentation for the correct endpoint."
+                ]
+            ]
+        );
 
-        echo "This is crazy, but this page was not found!";
+        return $response;
     }
 );
 

@@ -46,7 +46,7 @@ http://localhost:8888/server/api/multiply/100/5
 Install the dependencies by running the following commands in the root directory.
 
 #### Development environment
-The app will serve & watch for development changes. Change the BASE_URL variable in /client/app/app.constants.js as per the PHP server. 
+The app will serve & watch for development changes. Change the BASE_URL variable in /client/app/app.constants.js as per the PHP server.
 
 ```sh
 gulp

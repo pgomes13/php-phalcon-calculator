@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phalcon/incubator": "^3.0",
+        "phpunit/phpunit": "^4.8"
+    }
+}

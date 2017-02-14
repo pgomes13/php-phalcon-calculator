@@ -94,12 +94,30 @@ gulp --prod
 
 
 ## Tests
+
+### Frontend
 Following command will run the frontend unit tests using PhantomJS.
 
 ```sh
 npm test
 ```
 
+
+### Backend
+Go to /server and run the following command -
+
+```sh
+composer install
+```
+
+Then go to /tests and run the following command -
+
+```sh
+../vendor/bin/phpunit
+```
+
+
+Note - The PHPUnit setup is working correctly. Facing issues with the http mocking of the endpoints using PHPUnit.
 
 ## Contributors
 [Pascoal Gomes](https://au.linkedin.com/in/pascoal-gomes-a4835954)

@@ -23,6 +23,12 @@ $app->get('/preflight', function() use ($app) {
         $response->sendHeaders();
     });
 
+/***************************************************************************/
+/** All the endpoints should be separated into separate controller files. **/
+/** At this stage, I do not know how to do it. Needs some more research! **/
+/***************************************************************************/
+
+
 // Get addition result of two numbers
 $app->get(
     "/api/add/{num1:[0-9.]+}/{num2:[0-9.]+}",

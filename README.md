@@ -46,7 +46,7 @@ http://localhost:8888/server/api/multiply/100/5
 Install the dependencies by running the following commands in the root directory.
 
 #### Development environment
-The app will serve & watch for development changes.
+The app will serve & watch for development changes. Change the BASE_URL variable in /client/app/app.constants.js as per the PHP server. 
 
 ```sh
 gulp
@@ -54,17 +54,21 @@ gulp
 
 
 #### Production environment
-The app will build for production(if you serve the app using MAMP, after this command, you just have to go to http://localhost:8888 to see the working calculator app).
+The app will build for production. All assets in the build folder have been minified & asset revisioned for production release.
+
+(if you serve the app using MAMP, after this command, you just have to go to http://localhost:8888 to see the working calculator app).
 
 ```sh
 gulp --prod
 ```
 
 
+
+
 ## File Structure
 
 ```
-|-- client                      # Contains all the client-side code & assets
+|-- client                      # Contains all the client-side code and assets
     |-- app                     # Contains all the AngularJS code
     |-- sass                    # Contains all the SASS files
     |-- public                  # Contains all the compiled assets for dev environment
@@ -78,12 +82,14 @@ gulp --prod
 
     |-- gulp                    # Contains all the gulp files for asset pipelining
     |-- server                  # Contains all the PHP Phalcon RESTful code for end-points
+    |-- public                  # Folder is generated when 'gulp --prod' command is run. Contains production assets.
     |-- .bowerrc                # Contains the installation location for bower components
-    |-- .gitignore              # Contains all the files & folders to be ignored by git
+    |-- .gitignore              # Contains all the files and folders to be ignored by git
     |-- bower.json              # File for bower packages dependency management
     |-- Gulpfile.js             # Loads all the gulp tasks in /gulp directory
     |-- karma.conf.js           # Configuration file for the karma test runner
     |-- package.json            # File for node packages dependency management
+    |-- index.html              # File is generated when 'gulp --prod' command is run. Serves the frontend app.
 ```
 
 

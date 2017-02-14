@@ -38,7 +38,7 @@ http://localhost:8888/server/api/subtract/20/12
 http://localhost:8888/server/api/multiply/10.2/4
 
 #### Divide
-http://localhost:8888/server/api/multiply/100/5
+http://localhost:8888/server/api/divide/100/5
 
 
 

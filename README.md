@@ -79,17 +79,16 @@ gulp --prod
             |-- app.js          # Compiled JS files in /app directory into one single app.js file using Babel
         |-- templates           # Contains all the HTML templates from /app directory
         |-- index.html          # Loads all the assets in /public for dev environment
-
-    |-- gulp                    # Contains all the gulp files for asset pipelining
-    |-- server                  # Contains all the PHP Phalcon RESTful code for end-points
-    |-- public                  # Folder is generated when 'gulp --prod' command is run. Contains production assets.
-    |-- .bowerrc                # Contains the installation location for bower components
-    |-- .gitignore              # Contains all the files and folders to be ignored by git
-    |-- bower.json              # File for bower packages dependency management
-    |-- Gulpfile.js             # Loads all the gulp tasks in /gulp directory
-    |-- karma.conf.js           # Configuration file for the karma test runner
-    |-- package.json            # File for node packages dependency management
-    |-- index.html              # File is generated when 'gulp --prod' command is run. Serves the frontend app.
+|-- gulp                    # Contains all the gulp files for asset pipelining
+|-- server                  # Contains all the PHP Phalcon RESTful code for end-points
+|-- public                  # Folder is generated when 'gulp --prod' command is run. Contains production assets.
+|-- .bowerrc                # Contains the installation location for bower components
+|-- .gitignore              # Contains all the files and folders to be ignored by git
+|-- bower.json              # File for bower packages dependency management
+|-- Gulpfile.js             # Loads all the gulp tasks in /gulp directory
+|-- karma.conf.js           # Configuration file for the karma test runner
+|-- package.json            # File for node packages dependency management
+|-- index.html              # File is generated when 'gulp --prod' command is run. Serves the frontend app.
 ```
 
 
